@@ -1,0 +1,14 @@
+{
+  "name": "kurian-node",
+  "version": "1.0.0",
+  "description": "repo to have all node files",
+  "main": "commandline.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kurian",
+  "license": "ISC",
+  "dependencies": {
+    "guzzle": "0.0.3"
+  }
+}

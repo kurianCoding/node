@@ -1,0 +1,10 @@
+mymodule=require('./hello.js');
+mymodule(process.argv[2],process.argv[3],function(err,result){
+    if(err){
+	console.log(err);
+	return;
+    }
+    result.forEach(function(name){
+	console.log(name);
+    });
+});

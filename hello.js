@@ -1,8 +1,19 @@
 fs=require('fs');
-fs.readFile(process.argv[2],'utf8',function(err,data){
+path=require('path');
+
+function(filepathprefix,extenstion){
+filepathprefix=path.normalize(filepathprefix);
+extenstion='.'+extenstion;
+fs.readdir(filepathprefix,function(err,data){
     if(err){
 	console.log(err);
 	return;
     }
-    console.log(data.split('\n').length-1);
+    data.forEach(function(filename){
+	if(path.extname(filename)==extenstion){
+	    console.log(filename);
+	}
+    })
 });
+}
+
